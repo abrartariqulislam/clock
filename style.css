@@ -48,13 +48,63 @@ main{
     position: absolute;
     width: 8px;
     height: 8px;
+    background: #2f263a;
     border: 3px solid #fff;
     border-radius: 50%;
+    z-index: 100;
 }
-span{
+.clock span{
     position: absolute;
     inset: 20px;
     text-align: center;
     color: #fff;
     transform: rotate(calc(var(--n) * 30deg)); 
+}
+.clock span b{
+    font-size: 2em;
+    font-weight: 600;
+    opacity: 0.25;
+    display: inline-block;
+    transform: rotate(calc(var(--n) * -30deg)); 
+}
+.clock .circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.clock .circle i{
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    background-color: var(--color);
+    opacity: 0.8;
+    transform-origin: bottom;
+    transform: scaleY(0.5);
+}
+.clock .circle:nth-child(1) i{
+    width: 2px;
+}
+.clock .circle_2{
+    width: 240px;
+    height: 240px;
+}
+.clock .circle_3{
+    width: 180px;
+    height: 180px;
+}
+.clock .circle::before{
+    content: "";
+    position: absolute;
+    top: -8.5px;
+    width: 15px;
+    height: 15px;
+    background: var(--color);
+    border-radius: 50%;
+    box-shadow: 0 0 20px  var(--color),
+    0 0 60px  var(--color);
 }
