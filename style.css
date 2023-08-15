@@ -112,6 +112,7 @@ main{
     box-shadow: 0 0 20px  var(--color),
     0 0 60px  var(--color);
 }
+/* digital clock */
 .time{
     display: flex;
     align-items: center;
@@ -145,6 +146,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    letter-spacing: 2px;
 }
 .time div:nth-child(2)::after{
     animation: animate 1s steps(1) infinite;
